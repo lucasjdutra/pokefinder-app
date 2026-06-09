@@ -28,7 +28,7 @@ Siga o passo a passo abaixo para clonar e executar o projeto localmente em sua m
 
 1. **Clone este repositório:**
    ```bash
-   git clone [https://github.com/lucasjdutra/pokefinder-app.git](https://github.com/lucasjdutra/pokefinder-app.git)
+   git clone https://github.com/lucasjdutra/pokefinder-app.git
    ```
 
 2. **Acesse a pasta do projeto:**
@@ -44,11 +44,7 @@ Siga o passo a passo abaixo para clonar e executar o projeto localmente em sua m
 4. **Inicie o servidor do Expo:**
    ```bash
    npx expo start
-
-4. **Inicie o servidor do Expo:**
-    ```Bash
-    npx expo start```
-
+   ```
 
 5. **Execute no dispositivo:**
     - Abra o aplicativo da câmera no seu celular e escaneie o QR Code exibido no terminal (ou no navegador) para abrir via Expo Go.
