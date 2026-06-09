@@ -44,3 +44,16 @@ export const fetchPokemonDetails = async (id: number) => {
     throw new Error("Falha ao carregar os detalhes deste Pokémon.");
   }
 };
+
+export const fetchPokedexList = async (limit: number = 151) => {
+  try {
+    const response = await pokeApi.get(`/pokemon?limit=${limit}`);
+    return response.data.results.map((item: any, index: number) => ({
+      id: index + 1,
+      name: item.name,
+    }));
+  } catch (error) {
+    console.error("Erro ao buscar a lista da Pokédex:", error);
+    throw new Error("Falha ao carregar a lista.");
+  }
+};
