@@ -48,8 +48,4 @@ Siga o passo a passo abaixo para clonar e executar o projeto localmente em sua m
 
 5. **Execute no dispositivo:**
     - Abra o aplicativo da câmera no seu celular e escaneie o QR Code exibido no terminal (ou no navegador) para abrir via Expo Go.
-<<<<<<< HEAD
     - Pressione a no terminal para rodar em um emulador Android ou i para um simulador iOS, caso os tenha configurados.
-=======
-    - Pressione a no terminal para rodar em um emulador Android ou i para um simulador iOS, caso os tenha configurados.
->>>>>>> 0975255797b1a627733d0c80ccfbac7badaff59c
