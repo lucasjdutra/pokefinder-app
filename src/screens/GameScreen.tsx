@@ -55,7 +55,7 @@ export default function GameScreen() {
       dispatch({ type: 'SET_POKEMON', payload: newPokemon });
       setGuess('');
     } catch (error) {
-      Alert.alert("Erro", "Falha ao carregar o Pokémon. Verifique sua internet.");
+      Alert.alert("Error", "Failed to load the Pokémon. Check your internet connection.");
     }
   };
 
@@ -71,7 +71,7 @@ export default function GameScreen() {
     dispatch({ type: 'RESULT', payload: isMatch });
 
     if (isMatch) {
-      unlockPokemon(state.pokemon.id); // Salva no Contexto Global
+      unlockPokemon(state.pokemon.id);
     }
   };
 
@@ -85,7 +85,7 @@ export default function GameScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Quem é esse Pokémon?</Text>
+      <Text style={styles.title}>Who is this Pokémon?</Text>
 
       {state.status === 'loading' ? (
         <ActivityIndicator size="large" color="#0000ff" style={{ marginVertical: 50 }} />
@@ -105,22 +105,22 @@ export default function GameScreen() {
         <View style={styles.feedbackContainer}>
           <Text style={[styles.feedbackText, { color: state.isCorrect ? 'green' : 'red' }]}>
             {state.isCorrect 
-              ? `Você acertou! É o ${state.pokemon?.name.toUpperCase()}!` 
-              : `Você errou... Era o ${state.pokemon?.name.toUpperCase()}.`}
+              ? `Correct! It's ${state.pokemon?.name.toUpperCase()}!` 
+              : `Wrong answer... It was ${state.pokemon?.name.toUpperCase()}.`}
           </Text>
-          <Button title="Próximo Pokémon" onPress={loadNewPokemon} />
+          <Button title="Next Pokémon" onPress={loadNewPokemon} />
         </View>
       ) : (
         <View style={styles.inputContainer}>
           <TextInput 
             style={styles.input}
-            placeholder="Digite o nome..."
+            placeholder="Type the name..."
             value={guess}
             onChangeText={setGuess}
             editable={state.status === 'guessing'}
           />
           <Button 
-            title="Adivinhar" 
+            title="Guess" 
             onPress={handleGuess} 
             disabled={state.status !== 'guessing' || guess.trim() === ''} 
           />

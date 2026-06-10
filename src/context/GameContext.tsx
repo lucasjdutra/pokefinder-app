@@ -22,7 +22,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
           setUnlockedPokemons(JSON.parse(storedData));
         }
       } catch (error) {
-        console.error("Erro ao carregar dados do AsyncStorage:", error);
+        console.error("Error on loading data from AsyncStorage:", error);
       } finally {
         setIsLoaded(true);
       }
@@ -38,7 +38,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       const newList = [...prev, id];
       
       AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newList)).catch((error) => {
-        console.error("Erro ao salvar no AsyncStorage:", error);
+        console.error("Error on saving on AsyncStorage:", error);
       });
       
       return newList; 

@@ -20,7 +20,7 @@ function PokedexStack() {
       <Stack.Screen 
         name="PokedexDetail" 
         component={PokedexDetailScreen} 
-        options={{ title: 'Detalhes' }} 
+        options={{ title: 'Details' }} 
       />
     </Stack.Navigator>
   );
@@ -32,7 +32,7 @@ export default function AppNavigator() {
       <Tab.Screen 
         name="Game" 
         component={GameScreen} 
-        options={{ tabBarLabel: 'Jogar' }} 
+        options={{ tabBarLabel: 'Play' }} 
       />
       <Tab.Screen 
         name="PokedexTab" 

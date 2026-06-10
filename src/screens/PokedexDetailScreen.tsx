@@ -43,7 +43,7 @@ export default function PokedexDetailScreen() {
   if (!details) {
     return (
       <View style={styles.centerContainer}>
-        <Text>Erro ao carregar dados do Pokémon.</Text>
+        <Text>Error on loading data from this Pokémon.</Text>
       </View>
     );
   }
@@ -64,7 +64,7 @@ export default function PokedexDetailScreen() {
       </View>
 
       <View style={styles.descriptionContainer}>
-        <Text style={styles.descriptionTitle}>Descrição</Text>
+        <Text style={styles.descriptionTitle}>Description</Text>
         <Text style={styles.descriptionText}>{details.description}</Text>
       </View>
     </ScrollView>

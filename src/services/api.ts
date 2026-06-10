@@ -15,8 +15,8 @@ export const fetchRandomPokemon = async (maxId: number = 151) => {
       image: response.data.sprites.other['official-artwork'].front_default, 
     };
   } catch (error) {
-    console.error("Erro ao buscar Pokémon aleatório:", error);
-    throw new Error("Falha ao carregar o Pokémon. Tente novamente.");
+    console.error("Error on loading the random Pokémon:", error);
+    throw new Error("Error on loading the Pokémon. Try again.");
   }
 };
 
@@ -40,8 +40,8 @@ export const fetchPokemonDetails = async (id: number) => {
       description: description,
     };
   } catch (error) {
-    console.error(`Erro ao buscar detalhes do Pokémon ${id}:`, error);
-    throw new Error("Falha ao carregar os detalhes deste Pokémon.");
+    console.error(`Error finding details about this Pokémon: ${id}:`, error);
+    throw new Error("Error finding details about this Pokémon.");
   }
 };
 
@@ -53,7 +53,7 @@ export const fetchPokedexList = async (limit: number = 151) => {
       name: item.name,
     }));
   } catch (error) {
-    console.error("Erro ao buscar a lista da Pokédex:", error);
-    throw new Error("Falha ao carregar a lista.");
+    console.error("Error on finding the Pokédex list:", error);
+    throw new Error("Error on finding the list.");
   }
 };
